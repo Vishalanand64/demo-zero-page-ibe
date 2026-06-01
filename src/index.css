@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #c5a059;
+  --primary-dark: #a68545;
+  --bg-light: #ffffff;
+  --bg-soft: #fcfbf7;
+  --text-dark: #1a1c20;
+  --text-muted: #6b7280;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-gold {
+  color: var(--primary);
+}
+
+.bg-gold {
+  background-color: var(--primary);
+}
+
+.border-gold {
+  border-color: var(--primary);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f1115;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2d35;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+@theme {
+  --animate-slow-zoom: slow-zoom 20s ease-in-out infinite alternate;
+
+  @keyframes slow-zoom {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+  }
+}
