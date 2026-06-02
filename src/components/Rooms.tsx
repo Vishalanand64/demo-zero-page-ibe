@@ -170,7 +170,7 @@ const Rooms = () => {
 
         {/* SINGLE PROPERTY */}
         {singleProperty && (
-          <div className="flex flex-col justify-center items-start w-full min-h-[70vh] lg:min-h-[85vh] mt-8 lg:mt-0">
+          <div className="flex flex-col justify-center items-center w-auto min-h-[70vh] lg:min-h-[85vh] mt-8 lg:mt-0">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -188,9 +188,9 @@ const Rooms = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.2 }}
-                className="group w-full"
+                className="group w-full flex flex-col justify-center items-center"
               >
-                <div className="relative w-full max-w-[1500px] aspect-[16/9] md:aspect-[16/7] xl:aspect-[16/6] 2xl:aspect-[16/5.5] overflow-hidden mb-6 rounded-sm shadow-2xl">
+                <div className="relative w-[80%] max-w-[1500px] aspect-[16/9] md:aspect-[16/7] xl:aspect-[16/6] 2xl:aspect-[16/7] overflow-hidden mb-6 rounded-sm shadow-2xl">
                   <img
                     src={item.image}
                     alt={item.title}
@@ -228,7 +228,7 @@ const Rooms = () => {
                   </span>
                 </div>
 
-                <h3 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl font-serif mb-4 text-gray-900 group-hover:text-gold transition-colors leading-tight">
+                <h3 className="text-3xl sm:text-4xl md:text-5xl xl:text-5xl 2xl:text-5xl font-serif mb-4 text-gray-900 group-hover:text-gold transition-colors leading-tight">
                   {item.title}
                 </h3>
 
@@ -236,7 +236,7 @@ const Rooms = () => {
                   {item.desc}
                 </p>
 
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-5 border-t border-gray-100">
+                <div className="flex lg:w-[80%] flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-5 border-t border-gray-100">
                   <span className="text-sm uppercase tracking-widest text-gray-400 font-bold">
                     Available Now
                   </span>
